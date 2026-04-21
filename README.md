@@ -1,104 +1,195 @@
-# CMSC 125 - CPU Scheduling
+<!-- Improved compatibility of back to top link -->
+<a id="readme-top"></a>
 
-A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.
+<p align="center">
+  <a href="https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/graphs/contributors"><img src="https://img.shields.io/github/contributors/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge" alt="Contributors" /></a>
+  <a href="https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/network/members"><img src="https://img.shields.io/github/forks/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge" alt="Forks" /></a>
+  <a href="https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/stargazers"><img src="https://img.shields.io/github/stars/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge" alt="Stargazers" /></a>
+  <a href="https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/issues"><img src="https://img.shields.io/github/issues/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge" alt="Issues" /></a>
+  <a href="LICENSE.txt"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License" /></a>
+  <a href="https://linkedin.com/in/zcalifornia"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn" /></a>
+</p>
 
-![Project screenshot](repo/images/project_screen.png)
+## [![Project Screenshot][product-screenshot]][repo-url]
+##
 
-## Overview
+<div align="center">
+  <h3 align="center">CMSC 125 - CPU Scheduling</h3>
 
-This repository is for an individual academic assignment focused on implementing, running, and comparing:
+  <p align="center">
+    <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
+    <br />
+    Version: v0.0.3
+    <br />
+    Status: README presentation aligned to the repository template style; algorithm implementations still pending.
+    <br />
+    <a href="docs/version-0.0.3-docs.md"><strong>Read the latest version notes »</strong></a>
+    <br />
+    <br />
+    <a href="LICENSE.txt">View License</a>
+    &middot;
+    <a href="THIRD-PARTY-NOTICES.md">Third-Party Notices</a>
+    &middot;
+    <a href="https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/issues">Open Issue</a>
+  </p>
+</div>
 
-- First Come First Serve (FCFS)
-- Shortest Job First (SJF)
-- Priority Scheduling
-- Round Robin (RR)
+## Table of Contents
 
-The assignment requires each algorithm to be implemented in its own C or C++ source file, executed with custom input data, and documented in a short report that compares the resulting scheduling metrics.
+1. <a href="#about-the-project">About The Project</a>
+   - <a href="#what-this-repository-is">What This Repository Is</a>
+   - <a href="#what-this-repository-is-not-yet">What This Repository Is Not Yet</a>
+   - <a href="#built-with">Built With</a>
+2. <a href="#assignment-scope">Assignment Scope</a>
+   - <a href="#required-algorithms">Required Algorithms</a>
+   - <a href="#expected-deliverables">Expected Deliverables</a>
+3. <a href="#repository-layout">Repository Layout</a>
+4. <a href="#getting-started">Getting Started</a>
+   - <a href="#prerequisites">Prerequisites</a>
+   - <a href="#quick-start">Quick Start</a>
+5. <a href="#reference-materials">Reference Materials</a>
+6. <a href="#current-status">Current Status</a>
+7. <a href="#submission-checklist">Submission Checklist</a>
+8. <a href="#contributing">Contributing</a>
+9. <a href="#license">License</a>
+10. <a href="#third-party-notices">Third-Party Notices</a>
+11. <a href="#contact">Contact</a>
 
-## Status
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Version: `0.0.2` (license baseline established)
-- Assignment type: `INDIVIDUAL`
-- Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-- Current tracked state: repository governance/docs are initialized; the expected algorithm source files and final report PDF are not yet tracked in this repository.
+## About The Project
 
-## Objective
+This repository is a public academic project for CMSC 125 focused on implementing and comparing classic CPU scheduling algorithms in C or C++.
 
-Implement the different CPU scheduling algorithms on a set of sample processes using C/C++, then compare their:
+The work is intended to document both the implementation side of the assignment and the repository-side project hygiene around versioning, licensing, contribution rules, and third-party notices.
 
-- average waiting time
-- average response time
-- average turnaround time
+### What This Repository Is
 
-For the assignment rules, FCFS, SJF, and RR should use the same input dataset. Priority Scheduling may use the same dataset or a different one with priority values added.
+* A structured repository for an individual CMSC 125 CPU scheduling assignment.
+* A place to track the required FCFS, SJF, Priority, and Round Robin implementations.
+* A repository that separates repository-owned material under `LICENSE.txt` from third-party notices under `THIRD-PARTY-NOTICES.md`.
 
-## Reference Material
+### What This Repository Is Not Yet
 
-The assignment brief points to the following background material:
+* Not yet a complete submission repository with all four algorithm source files tracked.
+* Not yet a finished report repository with the final PDF tracked.
+* Not a general-purpose operating systems library or benchmarking suite.
 
-- CPU Scheduling overview: <https://www.studytonight.com/operating-system/cpu-scheduling>
-- FCFS: <https://www.studytonight.com/operating-system/first-come-first-serve>
-- SJF: <https://www.studytonight.com/operating-system/shortest-job-first>
-- Priority Scheduling: <https://www.studytonight.com/operating-system/priority-scheduling>
-- Round Robin: <https://www.studytonight.com/operating-system/round-robin-scheduling>
+### Built With
 
-## Expected Deliverables
+* [![C][c-shield]][c-url]
+* [![C++][cpp-shield]][cpp-url]
+* [![Markdown][markdown-shield]][markdown-url]
+* [![MIT License][license-inline-shield]][license-url]
 
-This repository is set up for the following submission outputs:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-1. Four source files, one per algorithm.
-2. One PDF report containing labeled screenshots and the comparison write-up.
-3. One ZIP archive containing the four source files plus the PDF.
+## Assignment Scope
 
-If the naming convention follows the maintainer surname in this repository, the expected filenames would be:
+This repository supports an individual assignment whose objective is to implement different CPU scheduling algorithms on a custom set of processes using C/C++, then compare their scheduling metrics.
 
-- `california_fcfs.c` or `california_fcfs.cpp`
-- `california_sjf.c` or `california_sjf.cpp`
-- `california_prio.c` or `california_prio.cpp`
-- `california_rr.c` or `california_rr.cpp`
-- `california_rfm.pdf`
+### Required Algorithms
 
-## Current Repository Contents
+* First Come First Serve (FCFS)
+* Shortest Job First (SJF)
+* Priority Scheduling
+* Round Robin (RR)
 
-The repository currently contains:
+Rules reflected in the repository documentation:
 
-- root governance and repository-policy documents
-- `LICENSE.txt` for repository-owned material
-- detailed version notes at `docs/version-0.0.1-docs.md` and `docs/version-0.0.2-docs.md`
-- `THIRD-PARTY-NOTICES.md`
-- the screenshot asset at `repo/images/project_screen.png`
+* FCFS, SJF, and RR should use the same input dataset so the comparison is fair.
+* Priority Scheduling may use the same dataset or a different one with explicit priority values added.
+* Each algorithm should live in its own C or C++ source file.
 
-Implementation files for the four scheduling algorithms and the final report PDF still need to be added.
+### Expected Deliverables
+
+The assignment expects:
+
+1. Four source files, one per scheduling algorithm.
+2. One PDF containing labeled screenshots and the written comparison of average waiting time, average response time, and average turnaround time.
+3. One ZIP archive containing the four source files and the PDF.
+
+If the required filename pattern follows the maintainer surname used in this repository, the expected output names would be:
+
+* `california_fcfs.c` or `california_fcfs.cpp`
+* `california_sjf.c` or `california_sjf.cpp`
+* `california_prio.c` or `california_prio.cpp`
+* `california_rr.c` or `california_rr.cpp`
+* `california_rfm.pdf`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Repository Layout
+
+```text
+cmsc-125-cpu-scheduling/
+  README.md
+  CHANGELOG.md
+  LICENSE.txt
+  THIRD-PARTY-NOTICES.md
+  CODE_OF_CONDUCT.md
+  CONTRIBUTING.md
+  SECURITY.md
+
+  docs/
+    version-0.0.1-docs.md
+    version-0.0.2-docs.md
+    version-0.0.3-docs.md
+
+  repo/
+    images/
+      project_screen.png
+
+  future expected outputs/
+    california_fcfs.c or california_fcfs.cpp
+    california_sjf.c or california_sjf.cpp
+    california_prio.c or california_prio.cpp
+    california_rr.c or california_rr.cpp
+    california_rfm.pdf
+```
+
+Current tracked emphasis:
+
+* root documentation and repository policy files are present
+* the license baseline is established in `LICENSE.txt`
+* repository-owned material and third-party notice material are described separately
+* the actual algorithm source files and final report are still pending
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
 ### Prerequisites
 
-You need one working C or C++ compiler, for example:
+You need one working C or C++ compiler, such as:
 
-- GCC via MinGW-w64
-- Clang
-- Microsoft Visual C++ build tools
+* GCC via MinGW-w64
+* Clang
+* Microsoft Visual C++ Build Tools
 
-### Suggested workflow
+### Quick Start
 
-1. Create one source file per algorithm using the required naming convention.
-2. Replace the sample process data with your own dataset.
-3. Keep the FCFS, SJF, and RR inputs identical so the metric comparison is fair.
-4. Run each program and capture clearly labeled screenshots.
-5. Write the comparison summary for waiting, response, and turnaround times.
-6. Package the deliverables into a ZIP file for submission.
+1. Clone the repository.
+   ```sh
+   git clone https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling.git
+   cd cmsc-125-cpu-scheduling
+   ```
+2. Create one source file per required algorithm using the expected naming convention.
+3. Replace the borrowed sample process data with your own dataset.
+4. Keep the FCFS, SJF, and RR datasets the same.
+5. Run each program and save labeled screenshots for the report.
+6. Write the metric comparison section for waiting, response, and turnaround time.
 
-### Example compile and run commands
+Example compile and run commands on Windows PowerShell:
 
-Using GCC for a C source file on Windows PowerShell:
+Using GCC for a C source file:
 
 ```powershell
 gcc .\california_fcfs.c -o .\california_fcfs.exe
 .\california_fcfs.exe
 ```
 
-Using G++ for a C++ source file on Windows PowerShell:
+Using G++ for a C++ source file:
 
 ```powershell
 g++ .\california_fcfs.cpp -o .\california_fcfs.exe
@@ -107,32 +198,117 @@ g++ .\california_fcfs.cpp -o .\california_fcfs.exe
 
 Repeat the same pattern for `sjf`, `prio`, and `rr`.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Reference Materials
+
+The assignment brief points to the following study materials:
+
+* CPU Scheduling overview: <https://www.studytonight.com/operating-system/cpu-scheduling>
+* FCFS: <https://www.studytonight.com/operating-system/first-come-first-serve>
+* SJF: <https://www.studytonight.com/operating-system/shortest-job-first>
+* Priority Scheduling: <https://www.studytonight.com/operating-system/priority-scheduling>
+* Round Robin: <https://www.studytonight.com/operating-system/round-robin-scheduling>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Current Status
+
+* Version: `0.0.3`
+* Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
+* Current state: governance docs, license baseline, third-party notices, and a sample-template-style README are in place.
+* Current gap: the four required scheduling implementations and final report PDF are not yet tracked in the repository.
+
+Supporting documentation already present:
+
+* `docs/version-0.0.1-docs.md` for the repository bootstrap record
+* `docs/version-0.0.2-docs.md` for the MIT license selection and notice-alignment record
+* `docs/version-0.0.3-docs.md` for the README presentation refresh and template-alignment record
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Submission Checklist
 
-- One source file exists for each required algorithm.
-- FCFS, SJF, and RR use the same test data.
-- Priority Scheduling includes valid priority input.
-- Program runs are captured with labeled screenshots.
-- The PDF includes both screenshots and the written comparison.
-- The ZIP archive contains the four source files and the PDF only.
+* One source file exists for each required algorithm.
+* FCFS, SJF, and RR use the same test data.
+* Priority Scheduling includes valid priority input.
+* Program runs are captured with labeled screenshots.
+* The PDF includes both screenshots and the written comparison.
+* The ZIP archive contains the four source files and the PDF only.
 
-## Notes
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Repository-owned material is distributed under the MIT License. See `LICENSE.txt`.
-- `THIRD-PARTY-NOTICES.md` is present and should be preserved when adding third-party material.
-- Version-specific repository setup notes are documented in `docs/version-0.0.1-docs.md` and `docs/version-0.0.2-docs.md`.
+## Contributing
+
+This repository primarily serves as an individual academic project, so external contribution is secondary to assignment completion.
+
+If changes are proposed, read the following first:
+
+* `CONTRIBUTING.md`
+* `CODE_OF_CONDUCT.md`
+* `SECURITY.md`
+
+Contributions should preserve:
+
+* assignment correctness
+* metric reproducibility
+* academic integrity
+* repository-owned licensing and third-party notice boundaries
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
-This repository uses the MIT License for repository-owned material.
-See `LICENSE.txt` for the full text.
+Repository-owned material in this repository is distributed under the MIT License.
+See `LICENSE.txt` for the full license text.
 
-## Maintainer
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Maintainer: Zildjian E. California
-- Email: <zecalifornia@up.edu.ph>
-- GitHub: <https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling>
-- LinkedIn: <https://www.linkedin.com/in/zcalifornia/>
-- ORCID: <https://orcid.org/0009-0002-2357-7606>
-- ResearchGate: <https://www.researchgate.net/profile/Zildjian-California>
-- Twitter/X: <https://twitter.com/zcalifornia_>
+## Third-Party Notices
+
+Third-party license texts, notices, and reference materials are documented separately in `THIRD-PARTY-NOTICES.md`.
+
+That file matters because:
+
+* it clarifies that bundled third-party notices do not override the repository license
+* it distinguishes repository-owned material from retained reference or notice material
+* it provides the right place to document third-party obligations if external code or assets are later added
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+Maintainer - [@zcalifornia_](https://twitter.com/zcalifornia_) - zecalifornia@up.edu.ph
+
+Project Link: [https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling](https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling)
+
+LinkedIn: [https://www.linkedin.com/in/zcalifornia/](https://www.linkedin.com/in/zcalifornia/)
+
+ORCID: [https://orcid.org/0009-0002-2357-7606](https://orcid.org/0009-0002-2357-7606)
+
+ResearchGate: [https://www.researchgate.net/profile/Zildjian-California](https://www.researchgate.net/profile/Zildjian-California)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge
+[contributors-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge
+[forks-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/network/members
+[stars-shield]: https://img.shields.io/github/stars/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge
+[stars-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/stargazers
+[issues-shield]: https://img.shields.io/github/issues/zcalifornia-ph/cmsc-125-cpu-scheduling.svg?style=for-the-badge
+[issues-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
+[license-url]: LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/zcalifornia
+[product-screenshot]: repo/images/project_screen.png
+[repo-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling
+[c-shield]: https://img.shields.io/badge/C-Programming-A8B9CC?style=for-the-badge&logo=c&logoColor=white
+[c-url]: https://en.wikipedia.org/wiki/C_(programming_language)
+[cpp-shield]: https://img.shields.io/badge/C%2B%2B-Programming-00599C?style=for-the-badge&logo=cplusplus&logoColor=white
+[cpp-url]: https://isocpp.org/
+[markdown-shield]: https://img.shields.io/badge/Markdown-Docs-000000?style=for-the-badge&logo=markdown&logoColor=white
+[markdown-url]: https://www.markdownguide.org/
+[license-inline-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge

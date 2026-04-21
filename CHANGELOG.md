@@ -2,6 +2,22 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.3] - 2026-04-22
+
+### Added
+
+- Added `docs/version-0.0.3-docs.md` documenting the README redesign, template-alignment decisions, and the relationship between the README, `LICENSE.txt`, and `THIRD-PARTY-NOTICES.md`.
+
+### Changed
+
+- Reworked `README.md` to better follow the repository's sample README structure, including badges, a centered project hero, a screenshot banner, a table of contents, sectioned project narrative, and footer-style reference links.
+- Updated `README.md` version references from `0.0.2` to `0.0.3` and pointed the "latest version notes" link at the new `docs/version-0.0.3-docs.md` artifact.
+- Expanded `README.md` so the MIT license baseline and third-party notice boundary are visible in the landing page instead of being implied only by the separate root files.
+
+### For Deletion
+
+- None.
+
 ## [0.0.2] - 2026-04-22
 
 ### Added
