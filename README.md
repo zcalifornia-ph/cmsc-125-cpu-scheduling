@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v0.0.3
+    Version: v0.0.4
     <br />
-    Status: README presentation aligned to the repository template style; algorithm implementations still pending.
+    Status: local reference articles are now formatted as readable Markdown; algorithm implementations still pending.
     <br />
-    <a href="docs/version-0.0.3-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-0.0.4-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -48,6 +48,8 @@
    - <a href="#prerequisites">Prerequisites</a>
    - <a href="#quick-start">Quick Start</a>
 5. <a href="#reference-materials">Reference Materials</a>
+   - <a href="#local-formatted-reference-articles">Local Formatted Reference Articles</a>
+   - <a href="#original-external-study-links">Original External Study Links</a>
 6. <a href="#current-status">Current Status</a>
 7. <a href="#submission-checklist">Submission Checklist</a>
 8. <a href="#contributing">Contributing</a>
@@ -132,9 +134,16 @@ cmsc-125-cpu-scheduling/
   SECURITY.md
 
   docs/
+    articles/
+      cpu-scheduling.md
+      first-come-first-serve.md
+      priority-scheduling.md
+      round-robin.md
+      shortest-job-first.md
     version-0.0.1-docs.md
     version-0.0.2-docs.md
     version-0.0.3-docs.md
+    version-0.0.4-docs.md
 
   repo/
     images/
@@ -153,6 +162,7 @@ Current tracked emphasis:
 * root documentation and repository policy files are present
 * the license baseline is established in `LICENSE.txt`
 * repository-owned material and third-party notice material are described separately
+* local formatted reference articles now exist under `docs/articles/`
 * the actual algorithm source files and final report are still pending
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -202,6 +212,18 @@ Repeat the same pattern for `sjf`, `prio`, and `rr`.
 
 ## Reference Materials
 
+### Local Formatted Reference Articles
+
+The repository now includes locally formatted Markdown versions of the study material under `docs/articles/`:
+
+* [`docs/articles/cpu-scheduling.md`](docs/articles/cpu-scheduling.md)
+* [`docs/articles/first-come-first-serve.md`](docs/articles/first-come-first-serve.md)
+* [`docs/articles/priority-scheduling.md`](docs/articles/priority-scheduling.md)
+* [`docs/articles/round-robin.md`](docs/articles/round-robin.md)
+* [`docs/articles/shortest-job-first.md`](docs/articles/shortest-job-first.md)
+
+### Original External Study Links
+
 The assignment brief points to the following study materials:
 
 * CPU Scheduling overview: <https://www.studytonight.com/operating-system/cpu-scheduling>
@@ -214,9 +236,9 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `0.0.3`
+* Version: `0.0.4`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, and a sample-template-style README are in place.
+* Current state: governance docs, license baseline, third-party notices, a sample-template-style README, and formatted local reference articles are in place.
 * Current gap: the four required scheduling implementations and final report PDF are not yet tracked in the repository.
 
 Supporting documentation already present:
@@ -224,6 +246,7 @@ Supporting documentation already present:
 * `docs/version-0.0.1-docs.md` for the repository bootstrap record
 * `docs/version-0.0.2-docs.md` for the MIT license selection and notice-alignment record
 * `docs/version-0.0.3-docs.md` for the README presentation refresh and template-alignment record
+* `docs/version-0.0.4-docs.md` for the local reference-article formatting and notice-alignment record
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

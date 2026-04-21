@@ -2,6 +2,28 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.4] - 2026-04-22
+
+### Added
+
+- Added `docs/version-0.0.4-docs.md` documenting the local reference-article formatting pass, README alignment, and notice-boundary updates.
+- Added a formatted local article set under `docs/articles/`:
+  - `docs/articles/cpu-scheduling.md`
+  - `docs/articles/first-come-first-serve.md`
+  - `docs/articles/priority-scheduling.md`
+  - `docs/articles/round-robin.md`
+  - `docs/articles/shortest-job-first.md`
+
+### Changed
+
+- Reformatted the five `docs/articles/*.md` files from plain text dumps into structured Markdown with headings, lists, fenced code blocks, and separated output sections where available.
+- Updated `README.md` to mark the repository as version `0.0.4`, point the latest-version link at `docs/version-0.0.4-docs.md`, and surface the local formatted reference articles in both the repository layout and reference-materials sections.
+- Updated `THIRD-PARTY-NOTICES.md` to clarify that `docs/articles/` contains third-party reference material and that local formatting changes for readability do not change the ownership boundary.
+
+### For Deletion
+
+- None.
+
 ## [0.0.3] - 2026-04-22
 
 ### Added

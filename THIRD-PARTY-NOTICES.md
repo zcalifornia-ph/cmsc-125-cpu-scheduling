@@ -9,6 +9,11 @@ reference material under `agent/licenses/`, including the catalog in
 `agent/licenses/license-manifest.txt`. Those materials are retained for notice,
 reference, attribution, compatibility, and workflow-support purposes.
 
+The repository also includes third-party reference article material under
+`docs/articles/`. Those Markdown files are retained as study and reference
+material. Local formatting edits made for readability do not change the
+underlying ownership or notice boundary for that material.
+
 The presence of third-party license texts in this repository does not relicense
 the repository as a whole and does not override the MIT terms in `LICENSE.txt`
 for repository-owned material.
