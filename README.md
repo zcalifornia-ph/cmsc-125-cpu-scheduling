@@ -17,7 +17,7 @@ The assignment requires each algorithm to be implemented in its own C or C++ sou
 
 ## Status
 
-- Version: `0.0.1` (initial repository bootstrap)
+- Version: `0.0.2` (license baseline established)
 - Assignment type: `INDIVIDUAL`
 - Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
 - Current tracked state: repository governance/docs are initialized; the expected algorithm source files and final report PDF are not yet tracked in this repository.
@@ -63,7 +63,8 @@ If the naming convention follows the maintainer surname in this repository, the 
 The repository currently contains:
 
 - root governance and repository-policy documents
-- detailed initialization notes at `docs/version-0.0.1-docs.md`
+- `LICENSE.txt` for repository-owned material
+- detailed version notes at `docs/version-0.0.1-docs.md` and `docs/version-0.0.2-docs.md`
 - `THIRD-PARTY-NOTICES.md`
 - the screenshot asset at `repo/images/project_screen.png`
 
@@ -117,9 +118,14 @@ Repeat the same pattern for `sjf`, `prio`, and `rr`.
 
 ## Notes
 
-- No project license file is currently present in the repository root.
+- Repository-owned material is distributed under the MIT License. See `LICENSE.txt`.
 - `THIRD-PARTY-NOTICES.md` is present and should be preserved when adding third-party material.
-- Version-specific repository setup notes are documented in `docs/version-0.0.1-docs.md`.
+- Version-specific repository setup notes are documented in `docs/version-0.0.1-docs.md` and `docs/version-0.0.2-docs.md`.
+
+## License
+
+This repository uses the MIT License for repository-owned material.
+See `LICENSE.txt` for the full text.
 
 ## Maintainer
 
