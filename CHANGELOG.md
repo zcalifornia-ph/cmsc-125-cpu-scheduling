@@ -2,6 +2,38 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.5] - 2026-04-22
+
+### Added
+
+- Added `docs/version-0.0.5-docs.md` documenting the Unit `U-B/U-C/U-D/U-E` construction pass, verification evidence, and remaining submission gates.
+- Added scheduling implementation sources under the project target path:
+  - `cmsc-125-cpu-scheduling/california_fcfs.c`
+  - `cmsc-125-cpu-scheduling/california_sjf.c`
+  - `cmsc-125-cpu-scheduling/california_rr.c`
+  - `cmsc-125-cpu-scheduling/california_prio.c`
+- Added AI-DLC construction artifacts for Units `U-B` through `U-E`:
+  - Unit-scoped domain/logical design files under `cmsc-125-cpu-scheduling/ai-dlc-docs/design-artifacts/u-{b,c,d,e}/`
+  - Unit-scoped ADRs under `cmsc-125-cpu-scheduling/ai-dlc-docs/design-artifacts/u-{b,c,d,e}/adr/`
+  - Unit-scoped traceability artifacts under `cmsc-125-cpu-scheduling/ai-dlc-docs/traceability/u-{b,c,d,e}/`
+  - Unit-scoped test evidence under `cmsc-125-cpu-scheduling/ai-dlc-docs/test-artifacts/u-{b,c,d,e}/`
+
+### Changed
+
+- Updated `README.md` to mark the repository as version `0.0.5`, point to `docs/version-0.0.5-docs.md`, and reflect that FCFS/SJF/RR/Priority source implementations now exist in the project target directory.
+- Updated `README.md` repository layout and status sections to include the AI-DLC artifact tree and to mark Unit F/Unit G deliverables as the remaining gap.
+- Updated `cmsc-125-cpu-scheduling/REQUIREMENTS.md` Bolt checklist state for `B-B1`, `B-C1`, `B-D1`, and `B-E1`:
+  - `Design`, `Implement`, `Test`, `Docs` marked complete
+  - execution notes added with compile/runtime evidence references
+  - learner `Review` for Gate D intentionally left pending
+
+### For Deletion
+
+- `cmsc-125-cpu-scheduling/california_fcfs.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_sjf.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_rr.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_prio.exe` (local build artifact)
+
 ## [0.0.4] - 2026-04-22
 
 ### Added
