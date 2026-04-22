@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v0.0.4
+    Version: v0.0.5
     <br />
-    Status: local reference articles are now formatted as readable Markdown; algorithm implementations still pending.
+    Status: FCFS, SJF, RR, and Priority C implementations are completed in the project target path; screenshots/PDF/zip packaging remain pending.
     <br />
-    <a href="docs/version-0.0.4-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-0.0.5-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -73,8 +73,8 @@ The work is intended to document both the implementation side of the assignment 
 
 ### What This Repository Is Not Yet
 
-* Not yet a complete submission repository with all four algorithm source files tracked.
-* Not yet a finished report repository with the final PDF tracked.
+* Not yet a complete submission repository with the final `california_rfm.pdf` tracked.
+* Not yet a finished packaging repository with the final `california.zip` tracked.
 * Not a general-purpose operating systems library or benchmarking suite.
 
 ### Built With
@@ -144,17 +144,24 @@ cmsc-125-cpu-scheduling/
     version-0.0.2-docs.md
     version-0.0.3-docs.md
     version-0.0.4-docs.md
+    version-0.0.5-docs.md
 
   repo/
     images/
       project_screen.png
 
-  future expected outputs/
-    california_fcfs.c or california_fcfs.cpp
-    california_sjf.c or california_sjf.cpp
-    california_prio.c or california_prio.cpp
-    california_rr.c or california_rr.cpp
-    california_rfm.pdf
+  cmsc-125-cpu-scheduling/
+    REQUIREMENTS.md
+    california_fcfs.c
+    california_sjf.c
+    california_rr.c
+    california_prio.c
+    ai-dlc-docs/
+      requirements/
+        INCEPTION.md
+      design-artifacts/
+      traceability/
+      test-artifacts/
 ```
 
 Current tracked emphasis:
@@ -163,7 +170,9 @@ Current tracked emphasis:
 * the license baseline is established in `LICENSE.txt`
 * repository-owned material and third-party notice material are described separately
 * local formatted reference articles now exist under `docs/articles/`
-* the actual algorithm source files and final report are still pending
+* algorithm implementations for FCFS, SJF, RR, and Priority are now present in `cmsc-125-cpu-scheduling/`
+* AI-DLC construction artifacts for Units `U-A` through `U-E` are now persisted under `cmsc-125-cpu-scheduling/ai-dlc-docs/`
+* screenshot/PDF/zip submission artifacts are still pending
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,25 +193,28 @@ You need one working C or C++ compiler, such as:
    git clone https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling.git
    cd cmsc-125-cpu-scheduling
    ```
-2. Create one source file per required algorithm using the expected naming convention.
-3. Replace the borrowed sample process data with your own dataset.
-4. Keep the FCFS, SJF, and RR datasets the same.
-5. Run each program and save labeled screenshots for the report.
-6. Write the metric comparison section for waiting, response, and turnaround time.
+2. Enter the project target directory where implementation files live.
+   ```sh
+   cd cmsc-125-cpu-scheduling
+   ```
+3. Compile each `.c` implementation with strict warnings enabled.
+4. Run each program and confirm outputs against `ai-dlc-docs/requirements/INCEPTION.md` section 6.
+5. Capture labeled screenshots for the report and assemble `california_rfm.pdf`.
+6. Package the final deliverables into `california.zip` once Unit F and Unit G are complete.
 
 Example compile and run commands on Windows PowerShell:
 
 Using GCC for a C source file:
 
 ```powershell
-gcc .\california_fcfs.c -o .\california_fcfs.exe
+gcc -std=c99 -Wall -Wextra .\california_fcfs.c -o .\california_fcfs.exe
 .\california_fcfs.exe
 ```
 
 Using G++ for a C++ source file:
 
 ```powershell
-g++ .\california_fcfs.cpp -o .\california_fcfs.exe
+g++ -Wall -Wextra .\california_fcfs.cpp -o .\california_fcfs.exe
 .\california_fcfs.exe
 ```
 
@@ -236,10 +248,10 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `0.0.4`
+* Version: `0.0.5`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, a sample-template-style README, and formatted local reference articles are in place.
-* Current gap: the four required scheduling implementations and final report PDF are not yet tracked in the repository.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, and four C algorithm implementations (FCFS/SJF/RR/Priority) with AI-DLC traceability artifacts are in place.
+* Current gap: Gate D learner review sign-off plus Unit F/Unit G deliverables (`california_rfm.pdf`, `california.zip`) are still pending.
 
 Supporting documentation already present:
 
@@ -247,6 +259,7 @@ Supporting documentation already present:
 * `docs/version-0.0.2-docs.md` for the MIT license selection and notice-alignment record
 * `docs/version-0.0.3-docs.md` for the README presentation refresh and template-alignment record
 * `docs/version-0.0.4-docs.md` for the local reference-article formatting and notice-alignment record
+* `docs/version-0.0.5-docs.md` for the Unit B/C/D/E build completion and AI-DLC artifact/validation record
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
