@@ -18,6 +18,7 @@ static void sort_by_priority(Process processes[], int count) {
         Process key = processes[i];
         int j = i - 1;
 
+        /* Stable tie-break by PID for deterministic output. */
         while (j >= 0 &&
                (processes[j].prio < key.prio ||
                 (processes[j].prio == key.prio && processes[j].pid > key.pid))) {

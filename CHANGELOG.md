@@ -2,6 +2,20 @@
 
 All notable changes to this repository are documented in this file.
 
+## [1.0.6] - 2026-04-23
+
+### Added or Changed
+
+- Standardized execution-order label casing across scheduler outputs by updating SJF from `Execution order` to `Execution Order` in `cmsc-125-cpu-scheduling/california_sjf.c`.
+- Added one-line deterministic tie-break comments in SJF and Priority sort loops (`stable tie-break by PID`) to clarify ordering intent for equal keys.
+- Moved RR average metric printing into `print_table(...)` in `cmsc-125-cpu-scheduling/california_rr.c` so output responsibility matches FCFS/SJF/Priority symmetry.
+- Updated `README.md` release metadata from `1.0.5` to `1.0.6` and linked latest version notes to `docs/version-1.0.6-docs.md`.
+- Added `docs/version-1.0.6-docs.md` documenting the minor-polish rationale and validation evidence.
+
+### For Deletion
+
+- None from this task context (minor source/documentation polish only; no tracked build artifacts were generated).
+
 ## [1.0.5] - 2026-04-23
 
 ### Added or Changed

@@ -19,7 +19,8 @@ void simulate_rr(Process processes[], int count, char exec_order[], size_t exec_
 void compute_response_times(Process processes[], int count);
 void compute_turnaround_times(Process processes[], int count);
 void compute_averages(const Process processes[], int count, double *avg_wt, double *avg_rt, double *avg_tat);
-void print_table(const Process processes[], int count, const char exec_order[]);
+void print_table(const Process processes[], int count, const char exec_order[],
+                 double avg_wt, double avg_rt, double avg_tat);
 
 void simulate_rr(Process processes[], int count, char exec_order[], size_t exec_order_size) {
     int exec_len = 0;
@@ -104,7 +105,8 @@ void compute_averages(const Process processes[], int count, double *avg_wt, doub
     *avg_tat = (double)sum_tat / count;
 }
 
-void print_table(const Process processes[], int count, const char exec_order[]) {
+void print_table(const Process processes[], int count, const char exec_order[],
+                 double avg_wt, double avg_rt, double avg_tat) {
     printf("Execution Order: %s\n", exec_order);
     printf("PID   BT   WT   RT   TAT\n");
 
@@ -116,6 +118,10 @@ void print_table(const Process processes[], int count, const char exec_order[]) 
                processes[i].rt,
                processes[i].tat);
     }
+
+    printf("Average WT: %.2f\n", avg_wt);
+    printf("Average RT: %.2f\n", avg_rt);
+    printf("Average TAT: %.2f\n", avg_tat);
 }
 
 int main(void) {
@@ -135,11 +141,7 @@ int main(void) {
     compute_response_times(processes, PROCESS_COUNT);
     compute_turnaround_times(processes, PROCESS_COUNT);
     compute_averages(processes, PROCESS_COUNT, &avg_wt, &avg_rt, &avg_tat);
-    print_table(processes, PROCESS_COUNT, exec_order);
-
-    printf("Average WT: %.2f\n", avg_wt);
-    printf("Average RT: %.2f\n", avg_rt);
-    printf("Average TAT: %.2f\n", avg_tat);
+    print_table(processes, PROCESS_COUNT, exec_order, avg_wt, avg_rt, avg_tat);
 
     return 0;
 }
