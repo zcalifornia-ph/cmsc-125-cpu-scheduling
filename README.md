@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v0.0.8
+    Version: v1.0.0
     <br />
-    Status: FCFS, SJF, RR, and Priority C implementations are completed; Unit F is Gate-D-approved with a learner-owned LaTeX PDF path; Unit G zip packaging remains pending.
+    Status: stable assignment-release baseline; FCFS, SJF, RR, and Priority C implementations plus report-source artifacts are complete and documented.
     <br />
-    <a href="docs/version-0.0.8-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-1.0.0-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -38,7 +38,7 @@
 
 1. <a href="#about-the-project">About The Project</a>
    - <a href="#what-this-repository-is">What This Repository Is</a>
-   - <a href="#what-this-repository-is-not-yet">What This Repository Is Not Yet</a>
+   - <a href="#what-this-repository-is-not">What This Repository Is Not</a>
    - <a href="#built-with">Built With</a>
 2. <a href="#assignment-scope">Assignment Scope</a>
    - <a href="#required-algorithms">Required Algorithms</a>
@@ -71,10 +71,9 @@ The work is intended to document both the implementation side of the assignment 
 * A place to track the required FCFS, SJF, Priority, and Round Robin implementations.
 * A repository that separates repository-owned material under `LICENSE.txt` from third-party notices under `THIRD-PARTY-NOTICES.md`.
 
-### What This Repository Is Not Yet
+### What This Repository Is Not
 
-* Not yet a complete submission repository with the final `california_rfm.pdf` tracked.
-* Not yet a finished packaging repository with the final `california.zip` tracked.
+* Not a repository that tracks generated submission binaries by default.
 * Not a general-purpose operating systems library or benchmarking suite.
 
 ### Built With
@@ -117,7 +116,7 @@ If the required filename pattern follows the maintainer surname used in this rep
 * `california_sjf.c` or `california_sjf.cpp`
 * `california_prio.c` or `california_prio.cpp`
 * `california_rr.c` or `california_rr.cpp`
-* `california_rfm.pdf`
+* one report PDF file containing labeled outputs and the comparative analysis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,13 +147,14 @@ cmsc-125-cpu-scheduling/
     version-0.0.6-docs.md
     version-0.0.7-docs.md
     version-0.0.8-docs.md
+    version-0.0.9-docs.md
+    version-1.0.0-docs.md
 
   repo/
     images/
       project_screen.png
 
   cmsc-125-cpu-scheduling/
-    REQUIREMENTS.md
     california_fcfs.c
     california_sjf.c
     california_rr.c
@@ -170,13 +170,6 @@ cmsc-125-cpu-scheduling/
       california_rfm.tex
       references.bib
       up-header.png
-      california_rfm.pdf
-    ai-dlc-docs/
-      requirements/
-        INCEPTION.md
-      design-artifacts/
-      traceability/
-      test-artifacts/
 ```
 
 Current tracked emphasis:
@@ -186,11 +179,10 @@ Current tracked emphasis:
 * repository-owned material and third-party notice material are described separately
 * local formatted reference articles now exist under `docs/articles/`
 * algorithm implementations for FCFS, SJF, RR, and Priority are now present in `cmsc-125-cpu-scheduling/`
-* AI-DLC construction artifacts for Units `U-A` through `U-F` are now persisted under `cmsc-125-cpu-scheduling/ai-dlc-docs/`
 * Unit F Bolt `B-F1` screenshot artifacts now exist under `cmsc-125-cpu-scheduling/artifacts/screenshots/`
 * Unit F Bolt `B-F2` comparative write-up now exists at `cmsc-125-cpu-scheduling/artifacts/writeup.md`
 * Unit F Bolt `B-F3` is complete with a learner-owned LaTeX source path under `cmsc-125-cpu-scheduling/writeup/`
-* Unit G packaging (`california.zip`) is the remaining pending submission step
+* submission packaging and validation are completed in the local workflow and reflected in release notes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,24 +208,24 @@ You need one working C or C++ compiler, such as:
    cd cmsc-125-cpu-scheduling
    ```
 3. Compile each `.c` implementation with strict warnings enabled.
-4. Run each program and confirm outputs against `ai-dlc-docs/requirements/INCEPTION.md` section 6.
-5. Capture labeled screenshots for the report and assemble `california_rfm.pdf`.
-6. Package the final deliverables into `california.zip` once Unit F and Unit G are complete.
+4. Run each program and confirm outputs against the documented reference values in project docs.
+5. Capture labeled screenshots and assemble the final report PDF.
+6. Package the final deliverables into a flat submission archive and verify it has exactly the required five root-level entries.
 
 Example compile and run commands on Windows PowerShell:
 
 Using GCC for a C source file:
 
 ```powershell
-gcc -std=c99 -Wall -Wextra .\california_fcfs.c -o .\california_fcfs.exe
-.\california_fcfs.exe
+gcc -std=c99 -Wall -Wextra .\california_fcfs.c -o .\california_fcfs
+.\california_fcfs
 ```
 
 Using G++ for a C++ source file:
 
 ```powershell
-g++ -Wall -Wextra .\california_fcfs.cpp -o .\california_fcfs.exe
-.\california_fcfs.exe
+g++ -Wall -Wextra .\california_fcfs.cpp -o .\california_fcfs
+.\california_fcfs
 ```
 
 Repeat the same pattern for `sjf`, `prio`, and `rr`.
@@ -266,10 +258,10 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `0.0.8`
+* Version: `1.0.0`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and all Unit F Bolts (`B-F1/B-F2/B-F3`) with Gate D approval are in place.
-* Current gap: Unit G packaging (`california.zip`) is still pending.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and report-source artifacts are complete and release-aligned.
+* Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
 
@@ -281,6 +273,8 @@ Supporting documentation already present:
 * `docs/version-0.0.6-docs.md` for the Unit F Bolt B-F1 screenshot completion and learner-approval record
 * `docs/version-0.0.7-docs.md` for the Unit F Bolt B-F2 write-up completion and learner-approval record
 * `docs/version-0.0.8-docs.md` for the Unit F Bolt B-F3 LaTeX-output approval and Gate D completion record
+* `docs/version-0.0.9-docs.md` for Unit G Bolt B-G1 packaging completion and Gate E learner approval record
+* `docs/version-1.0.0-docs.md` for the stable assignment-release baseline and documentation reconciliation summary
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
