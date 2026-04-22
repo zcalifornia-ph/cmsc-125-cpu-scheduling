@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v0.0.8
+    Version: v0.0.9
     <br />
-    Status: FCFS, SJF, RR, and Priority C implementations are completed; Unit F is Gate-D-approved with a learner-owned LaTeX PDF path; Unit G zip packaging remains pending.
+    Status: FCFS, SJF, RR, and Priority C implementations are completed; Unit F is Gate-D-approved with a learner-owned LaTeX PDF path; Unit G zip packaging is complete and Gate E is learner-approved.
     <br />
-    <a href="docs/version-0.0.8-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-0.0.9-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -73,8 +73,7 @@ The work is intended to document both the implementation side of the assignment 
 
 ### What This Repository Is Not Yet
 
-* Not yet a complete submission repository with the final `california_rfm.pdf` tracked.
-* Not yet a finished packaging repository with the final `california.zip` tracked.
+* Not a repository that tracks generated submission binaries (`california_rfm.pdf`, `california.zip`) by default.
 * Not a general-purpose operating systems library or benchmarking suite.
 
 ### Built With
@@ -148,6 +147,7 @@ cmsc-125-cpu-scheduling/
     version-0.0.6-docs.md
     version-0.0.7-docs.md
     version-0.0.8-docs.md
+    version-0.0.9-docs.md
 
   repo/
     images/
@@ -190,7 +190,7 @@ Current tracked emphasis:
 * Unit F Bolt `B-F1` screenshot artifacts now exist under `cmsc-125-cpu-scheduling/artifacts/screenshots/`
 * Unit F Bolt `B-F2` comparative write-up now exists at `cmsc-125-cpu-scheduling/artifacts/writeup.md`
 * Unit F Bolt `B-F3` is complete with a learner-owned LaTeX source path under `cmsc-125-cpu-scheduling/writeup/`
-* Unit G packaging (`california.zip`) is the remaining pending submission step
+* Unit G Bolt `B-G1` is complete: `california.zip` is generated with the required flat five-file packaging contract
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -218,7 +218,7 @@ You need one working C or C++ compiler, such as:
 3. Compile each `.c` implementation with strict warnings enabled.
 4. Run each program and confirm outputs against `ai-dlc-docs/requirements/INCEPTION.md` section 6.
 5. Capture labeled screenshots for the report and assemble `california_rfm.pdf`.
-6. Package the final deliverables into `california.zip` once Unit F and Unit G are complete.
+6. Package the final deliverables into `california.zip` and verify the archive has exactly the required five root-level entries.
 
 Example compile and run commands on Windows PowerShell:
 
@@ -266,10 +266,10 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `0.0.8`
+* Version: `0.0.9`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and all Unit F Bolts (`B-F1/B-F2/B-F3`) with Gate D approval are in place.
-* Current gap: Unit G packaging (`california.zip`) is still pending.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), all Unit F Bolts (`B-F1/B-F2/B-F3`) with Gate D approval, and Unit G Bolt `B-G1` packaging completion with Gate E learner approval are in place.
+* Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
 
@@ -281,6 +281,7 @@ Supporting documentation already present:
 * `docs/version-0.0.6-docs.md` for the Unit F Bolt B-F1 screenshot completion and learner-approval record
 * `docs/version-0.0.7-docs.md` for the Unit F Bolt B-F2 write-up completion and learner-approval record
 * `docs/version-0.0.8-docs.md` for the Unit F Bolt B-F3 LaTeX-output approval and Gate D completion record
+* `docs/version-0.0.9-docs.md` for Unit G Bolt B-G1 packaging completion and Gate E learner approval record
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

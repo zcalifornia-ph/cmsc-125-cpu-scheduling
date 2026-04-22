@@ -2,6 +2,40 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.9] - 2026-04-23
+
+### Added
+
+- Added `docs/version-0.0.9-docs.md` documenting Unit `U-G` / Bolt `B-G1` submission-zip completion, verification evidence, and learner Gate E approval.
+- Added Unit `U-G` Bolt `B-G1` construction artifacts (workspace AI-DLC context) under `cmsc-125-cpu-scheduling/ai-dlc-docs/`:
+  - design artifacts (`design-artifacts/u-g/domain-design.md`, `design-artifacts/u-g/logical-design.md`)
+  - ADR (`design-artifacts/u-g/adr/b-g1-adr.md`)
+  - traceability (`traceability/u-g/b-g1-traceability.md`)
+  - test evidence (`test-artifacts/u-g/t-g1-evidence.md`, `test-artifacts/u-g/t-g1-zip-listing.txt`)
+
+### Changed
+
+- Updated `README.md` to version `0.0.9`, linked `docs/version-0.0.9-docs.md`, and refreshed status/layout/current-state sections to reflect Unit `U-G` completion and Gate E approval.
+- Updated `cmsc-125-cpu-scheduling/REQUIREMENTS.md` for Bolt `B-G1`:
+  - `Design`, `Implement`, `Test`, `Docs`, and `Review` marked complete
+  - execution note and Gate E status updated to record learner approval
+  - section 13 "Suggested Next `.task` Invocation" remains aligned to `deploy.task` then `ops.task`
+- Updated `cmsc-125-cpu-scheduling/ai-dlc-docs/traceability/u-g/b-g1-traceability.md` status and notes to reflect learner Gate E approval.
+
+### For Deletion
+
+- `cmsc-125-cpu-scheduling/california_fcfs.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_sjf.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_rr.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_prio.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.aux` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.bbl` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.blg` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.fdb_latexmk` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.fls` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.log` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.out` (LaTeX intermediate artifact)
+
 ## [0.0.8] - 2026-04-23
 
 ### Added
