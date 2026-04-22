@@ -2,6 +2,20 @@
 
 All notable changes to this repository are documented in this file.
 
+## [1.0.5] - 2026-04-23
+
+### Added or Changed
+
+- Strengthened comparative analysis in `cmsc-125-cpu-scheduling/artifacts/writeup.md` with an explicit FCFS/SJF `ART == AWT` explanation under zero-arrival, non-preemptive conditions.
+- Added a cross-metric conclusion sentence in `cmsc-125-cpu-scheduling/artifacts/writeup.md` clarifying that SJF dominates this dataset while RR optimizes ART for interactivity-oriented workloads.
+- Synchronized the same two analysis-closure statements in LaTeX source `cmsc-125-cpu-scheduling/writeup/california_rfm.tex` so report-source variants remain aligned.
+- Updated `README.md` release metadata from `1.0.4` to `1.0.5` and linked latest version notes to `docs/version-1.0.5-docs.md`.
+- Added `docs/version-1.0.5-docs.md` with rationale and evidence for the write-up-quality improvement patch.
+
+### For Deletion
+
+- None from this task context (documentation/write-up source update only; no tracked build artifacts were generated).
+
 ## [1.0.4] - 2026-04-23
 
 ### Added or Changed
