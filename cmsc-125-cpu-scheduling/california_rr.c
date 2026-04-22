@@ -3,18 +3,27 @@
 
 #define PROCESS_COUNT 5
 #define QUANTUM 3
+#define EXEC_ORDER_SIZE 512
 
-void compute_waiting_times(const int bt[], int wt[], int rt[], int tat[]);
+void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], int tat[],
+                           char exec_order[], size_t exec_order_size);
 void compute_response_times(const int first_dispatch[], int rt[]);
 void compute_turnaround_times(const int bt[], const int wt[], int tat[]);
 void compute_averages(const int wt[], const int rt[], const int tat[], double *avg_wt, double *avg_rt, double *avg_tat);
-void print_table(const int pid[], const int bt[], const int wt[], const int rt[], const int tat[]);
+void print_table(const int pid[], const int bt[], const int wt[], const int rt[], const int tat[],
+                 const char exec_order[]);
 
-void compute_waiting_times(const int bt[], int wt[], int rt[], int tat[]) {
+void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], int tat[],
+                           char exec_order[], size_t exec_order_size) {
     int remaining[PROCESS_COUNT];
     int first_dispatch[PROCESS_COUNT];
+    int exec_len = 0;
     int completed = 0;
     int t = 0;
+
+    if (exec_order_size > 0) {
+        exec_order[0] = '\0';
+    }
 
     for (int i = 0; i < PROCESS_COUNT; ++i) {
         remaining[i] = bt[i];
@@ -32,6 +41,21 @@ void compute_waiting_times(const int bt[], int wt[], int rt[], int tat[]) {
 
             if (first_dispatch[i] == -1) {
                 first_dispatch[i] = t;
+            }
+
+            if ((size_t)exec_len < exec_order_size) {
+                int written = snprintf(exec_order + exec_len,
+                                       exec_order_size - (size_t)exec_len,
+                                       "%sP%d",
+                                       exec_len ? ", " : "",
+                                       pid[i]);
+                if (written > 0) {
+                    exec_len += written;
+                    if ((size_t)exec_len >= exec_order_size) {
+                        exec_len = (int)exec_order_size - 1;
+                        exec_order[exec_len] = '\0';
+                    }
+                }
             }
 
             if (remaining[i] > QUANTUM) {
@@ -78,8 +102,9 @@ void compute_averages(const int wt[], const int rt[], const int tat[], double *a
     *avg_tat = (double)sum_tat / PROCESS_COUNT;
 }
 
-void print_table(const int pid[], const int bt[], const int wt[], const int rt[], const int tat[]) {
-    printf("Execution Order: P1, P2, P3, P4, P5, P1, P2, P3, P4, P1, P3\n");
+void print_table(const int pid[], const int bt[], const int wt[], const int rt[], const int tat[],
+                 const char exec_order[]) {
+    printf("Execution Order: %s\n", exec_order);
     printf("PID   BT   WT   RT   TAT\n");
 
     for (int i = 0; i < PROCESS_COUNT; ++i) {
@@ -93,13 +118,14 @@ int main(void) {
     int wt[PROCESS_COUNT];
     int rt[PROCESS_COUNT];
     int tat[PROCESS_COUNT];
+    char exec_order[EXEC_ORDER_SIZE];
     double avg_wt;
     double avg_rt;
     double avg_tat;
 
-    compute_waiting_times(bt, wt, rt, tat);
+    compute_waiting_times(pid, bt, wt, rt, tat, exec_order, sizeof exec_order);
     compute_averages(wt, rt, tat, &avg_wt, &avg_rt, &avg_tat);
-    print_table(pid, bt, wt, rt, tat);
+    print_table(pid, bt, wt, rt, tat, exec_order);
 
     printf("Average WT: %.2f\n", avg_wt);
     printf("Average RT: %.2f\n", avg_rt);
