@@ -2,6 +2,19 @@
 
 All notable changes to this repository are documented in this file.
 
+## [1.0.1] - 2026-04-23
+
+### Added or Changed
+
+- Added four standalone explanation artifacts under `learn/` for FCFS, SJF, Priority, and Round Robin source files.
+- Bumped repository documentation versioning from `1.0.0` to `1.0.1`.
+- Added `docs/version-1.0.1-docs.md` as the versioned documentation record for this explanation-guides milestone.
+- Updated `README.md` release metadata and repository-layout/status sections to reflect the new explanation assets.
+
+### For Deletion
+
+- None from this task context (documentation-only update; no build artifacts generated).
+
 ## [1.0.0] - 2026-04-23
 
 ### Added or Changed

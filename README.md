@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v1.0.0
+    Version: v1.0.1
     <br />
     Status: stable assignment-release baseline; FCFS, SJF, RR, and Priority C implementations plus report-source artifacts are complete and documented.
     <br />
-    <a href="docs/version-1.0.0-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-1.0.1-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -149,6 +149,13 @@ cmsc-125-cpu-scheduling/
     version-0.0.8-docs.md
     version-0.0.9-docs.md
     version-1.0.0-docs.md
+    version-1.0.1-docs.md
+
+  learn/
+    explain-cmsc-125-cpu-scheduling-california_fcfs.md
+    explain-cmsc-125-cpu-scheduling-california_sjf.md
+    explain-cmsc-125-cpu-scheduling-california_prio.md
+    explain-cmsc-125-cpu-scheduling-california_rr.md
 
   repo/
     images/
@@ -258,9 +265,9 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `1.0.0`
+* Version: `1.0.1`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and report-source artifacts are complete and release-aligned.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned.
 * Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
@@ -275,6 +282,7 @@ Supporting documentation already present:
 * `docs/version-0.0.8-docs.md` for the Unit F Bolt B-F3 LaTeX-output approval and Gate D completion record
 * `docs/version-0.0.9-docs.md` for Unit G Bolt B-G1 packaging completion and Gate E learner approval record
 * `docs/version-1.0.0-docs.md` for the stable assignment-release baseline and documentation reconciliation summary
+* `docs/version-1.0.1-docs.md` for the standalone explanation-guides release note and docs reconciliation summary
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
