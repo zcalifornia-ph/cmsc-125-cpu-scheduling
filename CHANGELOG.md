@@ -2,6 +2,18 @@
 
 All notable changes to this repository are documented in this file.
 
+## [1.0.7] - 2026-04-23
+
+### Added or Changed
+
+- Regenerated `cmsc-125-cpu-scheduling/artifacts/screenshots/01_fcfs.png`, `02_sjf.png`, `03_rr.png`, and `04_prio.png` to reflect the updated scheduler outputs from the 1.0.6 polish pass (execution-order label casing, RR print-table symmetry).
+- Updated `README.md` release metadata from `1.0.6` to `1.0.7` and linked latest version notes to `docs/version-1.0.7-docs.md`.
+- Added `docs/version-1.0.7-docs.md` documenting the screenshot-refresh rationale and validation notes.
+
+### For Deletion
+
+- None from this task context (screenshot artifact refresh only; no source code changes).
+
 ## [1.0.6] - 2026-04-23
 
 ### Added or Changed

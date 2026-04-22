@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C (C99) for CMSC 125.</strong>
     <br />
-    Version: v1.0.6
+    Version: v1.0.7
     <br />
     Status: stable assignment-release baseline; FCFS, SJF, RR, and Priority C implementations plus report-source artifacts are complete and documented.
     <br />
-    <a href="docs/version-1.0.6-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-1.0.7-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -262,9 +262,9 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `1.0.6`
+* Version: `1.0.7`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned, with unified `Process`-struct scheduling abstractions plus cross-file output/sort-polish consistency for execution-order labels, RR table output symmetry, and deterministic tie-break annotation.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned, with unified `Process`-struct scheduling abstractions, cross-file output/sort-polish consistency, and refreshed labeled screenshots reflecting the 1.0.6 output changes.
 * Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
@@ -285,6 +285,7 @@ Supporting documentation already present:
 * `docs/version-1.0.4-docs.md` for scheduler abstraction unification and process-count consistency validation
 * `docs/version-1.0.5-docs.md` for comparative write-up analysis-closure updates and report-source sync
 * `docs/version-1.0.6-docs.md` for scheduler output and deterministic-sort polish updates
+* `docs/version-1.0.7-docs.md` for screenshot artifact refresh following the 1.0.6 output-polish pass
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
