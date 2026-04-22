@@ -2,6 +2,36 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.6] - 2026-04-22
+
+### Added
+
+- Added `docs/version-0.0.6-docs.md` documenting Unit `U-F` / Bolt `B-F1` completion, screenshot evidence generation, learner approval, and downstream remaining work.
+- Added screenshot artifacts under `cmsc-125-cpu-scheduling/artifacts/screenshots/`:
+  - `01_fcfs.png`
+  - `02_sjf.png`
+  - `03_rr.png`
+  - `04_prio.png`
+- Added Unit `U-F` construction artifacts (workspace AI-DLC context) under `cmsc-125-cpu-scheduling/ai-dlc-docs/`:
+  - design artifacts (`design-artifacts/u-f/`)
+  - traceability (`traceability/u-f/b-f1-traceability.md`)
+  - test evidence (`test-artifacts/u-f/t-f1-evidence.md`)
+
+### Changed
+
+- Updated `README.md` to version `0.0.6`, linked `docs/version-0.0.6-docs.md`, and refreshed status text to reflect that Bolt `B-F1` is complete and learner-approved while `B-F2/B-F3` and Unit `U-G` remain pending.
+- Updated `README.md` repository layout/status sections to include the new screenshot artifact path and Unit-F progress.
+- Updated `cmsc-125-cpu-scheduling/REQUIREMENTS.md` for Bolt `B-F1`:
+  - `Design`, `Implement`, `Test`, `Docs`, and `Review` marked complete
+  - execution note updated to indicate learner approval and `B-F2` unblocked
+
+### For Deletion
+
+- `cmsc-125-cpu-scheduling/california_fcfs.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_sjf.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_rr.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_prio.exe` (local build artifact)
+
 ## [0.0.5] - 2026-04-22
 
 ### Added
