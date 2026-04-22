@@ -15,7 +15,8 @@ Relevant security concerns include:
 
 | Version | Supported |
 | --- | --- |
-| 0.0.1 | Yes |
+| 1.0.x | Yes |
+| 0.x | No |
 
 ## Reporting a Vulnerability
 

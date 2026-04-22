@@ -17,13 +17,13 @@
   <h3 align="center">CMSC 125 - CPU Scheduling</h3>
 
   <p align="center">
-    <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
+    <strong>A comparative implementation of four CPU scheduling algorithms in C (C99) for CMSC 125.</strong>
     <br />
-    Version: v1.0.0
+    Version: v1.0.1
     <br />
     Status: stable assignment-release baseline; FCFS, SJF, RR, and Priority C implementations plus report-source artifacts are complete and documented.
     <br />
-    <a href="docs/version-1.0.0-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-1.0.1-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -61,7 +61,7 @@
 
 ## About The Project
 
-This repository is a public academic project for CMSC 125 focused on implementing and comparing classic CPU scheduling algorithms in C or C++.
+This repository is a public academic project for CMSC 125 focused on implementing and comparing classic CPU scheduling algorithms in C (C99).
 
 The work is intended to document both the implementation side of the assignment and the repository-side project hygiene around versioning, licensing, contribution rules, and third-party notices.
 
@@ -79,7 +79,6 @@ The work is intended to document both the implementation side of the assignment 
 ### Built With
 
 * [![C][c-shield]][c-url]
-* [![C++][cpp-shield]][cpp-url]
 * [![Markdown][markdown-shield]][markdown-url]
 * [![MIT License][license-inline-shield]][license-url]
 
@@ -87,7 +86,7 @@ The work is intended to document both the implementation side of the assignment 
 
 ## Assignment Scope
 
-This repository supports an individual assignment whose objective is to implement different CPU scheduling algorithms on a custom set of processes using C/C++, then compare their scheduling metrics.
+This repository supports an individual assignment whose objective is to implement different CPU scheduling algorithms on a custom set of processes using C (C99), then compare their scheduling metrics.
 
 ### Required Algorithms
 
@@ -110,12 +109,12 @@ The assignment expects:
 2. One PDF containing labeled screenshots and the written comparison of average waiting time, average response time, and average turnaround time.
 3. One ZIP archive containing the four source files and the PDF.
 
-If the required filename pattern follows the maintainer surname used in this repository, the expected output names would be:
+If the required filename pattern follows the maintainer surname used in this repository, the expected output names are:
 
-* `california_fcfs.c` or `california_fcfs.cpp`
-* `california_sjf.c` or `california_sjf.cpp`
-* `california_prio.c` or `california_prio.cpp`
-* `california_rr.c` or `california_rr.cpp`
+* `california_fcfs.c`
+* `california_sjf.c`
+* `california_prio.c`
+* `california_rr.c`
 * one report PDF file containing labeled outputs and the comparative analysis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,6 +148,13 @@ cmsc-125-cpu-scheduling/
     version-0.0.8-docs.md
     version-0.0.9-docs.md
     version-1.0.0-docs.md
+    version-1.0.1-docs.md
+
+  learn/
+    explain-cmsc-125-cpu-scheduling-california_fcfs.md
+    explain-cmsc-125-cpu-scheduling-california_sjf.md
+    explain-cmsc-125-cpu-scheduling-california_prio.md
+    explain-cmsc-125-cpu-scheduling-california_rr.md
 
   repo/
     images/
@@ -190,7 +196,7 @@ Current tracked emphasis:
 
 ### Prerequisites
 
-You need one working C or C++ compiler, such as:
+You need one working C compiler, such as:
 
 * GCC via MinGW-w64
 * Clang
@@ -218,13 +224,6 @@ Using GCC for a C source file:
 
 ```powershell
 gcc -std=c99 -Wall -Wextra .\california_fcfs.c -o .\california_fcfs
-.\california_fcfs
-```
-
-Using G++ for a C++ source file:
-
-```powershell
-g++ -Wall -Wextra .\california_fcfs.cpp -o .\california_fcfs
 .\california_fcfs
 ```
 
@@ -258,9 +257,9 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `1.0.0`
+* Version: `1.0.1`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and report-source artifacts are complete and release-aligned.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned.
 * Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
@@ -275,6 +274,7 @@ Supporting documentation already present:
 * `docs/version-0.0.8-docs.md` for the Unit F Bolt B-F3 LaTeX-output approval and Gate D completion record
 * `docs/version-0.0.9-docs.md` for Unit G Bolt B-G1 packaging completion and Gate E learner approval record
 * `docs/version-1.0.0-docs.md` for the stable assignment-release baseline and documentation reconciliation summary
+* `docs/version-1.0.1-docs.md` for the standalone explanation-guides release note and docs reconciliation summary
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -358,8 +358,6 @@ ResearchGate: [https://www.researchgate.net/profile/Zildjian-California](https:/
 [repo-url]: https://github.com/zcalifornia-ph/cmsc-125-cpu-scheduling
 [c-shield]: https://img.shields.io/badge/C-Programming-A8B9CC?style=for-the-badge&logo=c&logoColor=white
 [c-url]: https://en.wikipedia.org/wiki/C_(programming_language)
-[cpp-shield]: https://img.shields.io/badge/C%2B%2B-Programming-00599C?style=for-the-badge&logo=cplusplus&logoColor=white
-[cpp-url]: https://isocpp.org/
 [markdown-shield]: https://img.shields.io/badge/Markdown-Docs-000000?style=for-the-badge&logo=markdown&logoColor=white
 [markdown-url]: https://www.markdownguide.org/
 [license-inline-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge

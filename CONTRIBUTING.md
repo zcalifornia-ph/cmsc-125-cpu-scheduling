@@ -19,7 +19,7 @@ External contributions are not the main workflow, but if changes are proposed, t
 ## Coding Expectations
 
 - Keep one source file per scheduling algorithm.
-- Follow the assignment naming convention: `<surname>_<codename>.c` or `<surname>_<codename>.cpp`.
+- Follow the assignment naming convention: `<surname>_<codename>.c`.
 - Use the same dataset for FCFS, SJF, and RR unless the assignment instructions explicitly allow otherwise.
 - Keep priority values explicit in the Priority Scheduling implementation.
 - Prefer readable, well-structured code over clever but opaque shortcuts.
