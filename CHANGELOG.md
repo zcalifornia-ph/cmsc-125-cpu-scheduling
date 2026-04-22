@@ -2,6 +2,72 @@
 
 All notable changes to this repository will be documented in this file.
 
+## [0.0.8] - 2026-04-23
+
+### Added
+
+- Added `docs/version-0.0.8-docs.md` documenting Unit `U-F` / Bolt `B-F3` completion through a learner-owned LaTeX/BibTeX path, validation checks, and learner approval.
+- Added report-source artifacts under `cmsc-125-cpu-scheduling/writeup/`:
+  - `california_rfm.tex`
+  - `references.bib`
+  - `up-header.png`
+- Added Unit `U-F` Bolt `B-F3` construction artifacts (workspace AI-DLC context) under `cmsc-125-cpu-scheduling/ai-dlc-docs/`:
+  - design updates (`design-artifacts/u-f/domain-design.md`, `design-artifacts/u-f/logical-design.md`)
+  - ADR update (`design-artifacts/u-f/adr/b-f3-adr.md`)
+  - traceability update (`traceability/u-f/b-f3-traceability.md`)
+  - test evidence (`test-artifacts/u-f/t-f3-evidence.md`)
+  - page-order marker extracts (`test-artifacts/u-f/pdf-pages-latex/page-01.txt` through `page-05.txt`)
+
+### Changed
+
+- Updated `README.md` to version `0.0.8`, linked `docs/version-0.0.8-docs.md`, and refreshed status/layout text to reflect Unit `U-F` Gate-D approval and the learner-owned LaTeX report path.
+- Updated `README.md` repository layout to include `writeup/up-header.png` and remove the root-level `california_rfm.pdf` entry so the tree mirrors the current workspace state.
+- Updated `cmsc-125-cpu-scheduling/REQUIREMENTS.md` for Bolt `B-F3`:
+  - `Design`, `Implement`, `Test`, `Docs`, and `Review` marked complete
+  - execution note updated to record learner-owned LaTeX output and learner approval
+  - Gate D status updated to include Unit `U-F` approval
+- Updated `cmsc-125-cpu-scheduling/writeup/references.bib` so repeated-author output is no longer implied by em dash shorthand, using explicit author metadata control for bibliography rendering.
+
+### For Deletion
+
+- `cmsc-125-cpu-scheduling/california_fcfs.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_sjf.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_rr.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_prio.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.aux` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.bbl` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.blg` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.fdb_latexmk` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.fls` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.log` (LaTeX intermediate artifact)
+- `cmsc-125-cpu-scheduling/writeup/california_rfm.out` (LaTeX intermediate artifact)
+
+## [0.0.7] - 2026-04-22
+
+### Added
+
+- Added `docs/version-0.0.7-docs.md` documenting Unit `U-F` / Bolt `B-F2` comparative write-up completion, evidence checks, and learner approval.
+- Added `cmsc-125-cpu-scheduling/artifacts/writeup.md` with FCFS/SJF/RR comparative analysis using run-derived averages.
+- Added Unit `U-F` Bolt `B-F2` construction artifacts (workspace AI-DLC context) under `cmsc-125-cpu-scheduling/ai-dlc-docs/`:
+  - ADR: `design-artifacts/u-f/adr/b-f2-adr.md`
+  - traceability: `traceability/u-f/b-f2-traceability.md`
+  - test evidence: `test-artifacts/u-f/t-f2-evidence.md`
+
+### Changed
+
+- Updated `README.md` to version `0.0.7`, linked `docs/version-0.0.7-docs.md`, and refreshed status/layout text to show that Unit `U-F` Bolts `B-F1` and `B-F2` are complete.
+- Updated `README.md` repository layout to include `artifacts/writeup.md` in the project target path.
+- Updated `cmsc-125-cpu-scheduling/REQUIREMENTS.md` for Bolt `B-F2`:
+  - `Design`, `Implement`, `Test`, `Docs`, and `Review` marked complete
+  - execution note updated to indicate learner approval and `B-F3` unblocked
+
+### For Deletion
+
+- `cmsc-125-cpu-scheduling/california_fcfs.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_sjf.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_rr.exe` (local build artifact)
+- `cmsc-125-cpu-scheduling/california_prio.exe` (local build artifact)
+
 ## [0.0.6] - 2026-04-22
 
 ### Added
