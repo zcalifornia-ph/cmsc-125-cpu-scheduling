@@ -192,16 +192,15 @@ Self-check rubric:
 ## 17. Artifact Map
 Files read for this explanation:
 - `cmsc-125-cpu-scheduling/california_fcfs.c` (target file; source of implementation facts).
-- `cmsc-125-cpu-scheduling/ai-dlc-docs/design-artifacts/shared-dataset-spec.md` (supporting project contract for fixed dataset and formula validation).
-- `agent/action/explain.task` (output/verification requirements for this artifact).
-- `agent/reference/sample-study-guide-docs.md` (teaching-document structure baseline).
+- Project-level shared-dataset specification notes (supporting context for fixed dataset/formula validation).
+- Internal explanation-task contract and study-guide template references (used for section structure and verification checklist).
 
 ## 18. Copy-Paste Prompt Examples
 ```text
 explain.task cmsc-125-cpu-scheduling/california_fcfs.c
 explain.task cmsc-125-cpu-scheduling/california_sjf.c
 explain.task cmsc-125-cpu-scheduling/california_rr.c
-explain.task cmsc-125-cpu-scheduling/ai-dlc-docs/design-artifacts/shared-dataset-spec.md
+explain.task docs/articles/first-come-first-serve.md
 ```
 
 ## 19. 24-72 Hour Next Steps

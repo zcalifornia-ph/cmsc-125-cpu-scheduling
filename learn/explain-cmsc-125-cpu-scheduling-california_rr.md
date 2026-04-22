@@ -206,8 +206,7 @@ Self-check rubric:
 ## 17) Artifact Map
 Files read for this explanation:
 - `cmsc-125-cpu-scheduling/california_rr.c` (target source of truth).
-- `agent/action/explain.task` (required task contract for section/content/verification requirements).
-- `agent/reference/sample-study-guide-docs.md` (required style/template baseline).
+- Internal explanation-task contract and style-template references (for section coverage and verification shape).
 
 No additional supporting code files were required because this file is standalone and imports only `<stdio.h>`.
 
@@ -215,7 +214,7 @@ No additional supporting code files were required because this file is standalon
 ```text
 explain.task cmsc-125-cpu-scheduling/california_rr.c
 explain.task cmsc-125-cpu-scheduling/california_rr.c "compute_waiting_times"
-explain.task cmsc-125-cpu-scheduling
+explain.task docs/articles/round-robin.md
 ```
 
 ## 19) 24-72 Hour Next Steps

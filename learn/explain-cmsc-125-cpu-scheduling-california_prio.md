@@ -232,10 +232,8 @@ Target file read:
 - `cmsc-125-cpu-scheduling/california_prio.c` (full source of truth for all behavior claims).
 
 Supporting files read:
-- `agent/action/explain.task` (execution contract).
-- `agent/reference/sample-study-guide-docs.md` (output style baseline).
-- `agent/rules/system-prompt.md` (teaching/behavior alignment).
-- `agent/rules/PROFILE.md` (learner calibration context).
+- Internal explanation-task contract and output template references.
+- Internal teaching-style and learner-calibration references used for explanation tone and depth.
 
 No additional code/context files were required for truthful explanation of this standalone file.
 
@@ -243,7 +241,7 @@ No additional code/context files were required for truthful explanation of this 
 ```text
 explain.task cmsc-125-cpu-scheduling/california_prio.c
 explain.task cmsc-125-cpu-scheduling/california_prio.c "sort_by_priority"
-explain.task cmsc-125-cpu-scheduling
+explain.task docs/articles/priority-scheduling.md
 ```
 
 ## 19. 24-72 Hour Next Steps

@@ -10,6 +10,10 @@ All notable changes to this repository are documented in this file.
 - Bumped repository documentation versioning from `1.0.0` to `1.0.1`.
 - Added `docs/version-1.0.1-docs.md` as the versioned documentation record for this explanation-guides milestone.
 - Updated `README.md` release metadata and repository-layout/status sections to reflect the new explanation assets.
+- Reconciled `README.md` and `CONTRIBUTING.md` to the C-only implementation baseline (`.c` sources, C99 toolchain guidance).
+- Updated `SECURITY.md` supported-version table from an outdated `0.0.1` marker to the current `1.0.x` baseline.
+- Sanitized all four `learn/explain-cmsc-125-cpu-scheduling-california_*.md` guides to remove direct references to ignored internal workflow paths.
+- Restored section `18` prompt-example blocks in the four scheduler explain guides using public, non-ignored file targets.
 
 ### For Deletion
 

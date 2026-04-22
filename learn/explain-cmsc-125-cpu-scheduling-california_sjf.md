@@ -134,18 +134,16 @@ Self-check rubric:
 ## 17. Artifact Map
 Files read for this explanation:
 - `cmsc-125-cpu-scheduling/california_sjf.c` (target source file).
-- `agent/action/explain.task` (task contract and required section structure).
-- `agent/reference/sample-study-guide-docs.md` (style/template baseline).
-- `agent/rules/system-prompt.md` (teaching/operating behavior constraints).
-- `agent/rules/PROFILE.md` (local learner-context calibration).
+- Internal explanation-task contract and study-guide template references.
+- Internal teaching-style and learner-calibration references used to tune presentation depth.
 
-Note: the source comment references `ai-dlc-docs/design-artifacts/shared-dataset-spec.md`, but that path was not found in this repository snapshot.
+Note: the source comment references an internal shared-dataset specification document; this guide relies on constants visible in the source file.
 
 ## 18. Copy-Paste Prompt Examples
 ```text
 explain.task cmsc-125-cpu-scheduling/california_sjf.c
 explain.task cmsc-125-cpu-scheduling/california_sjf.c "sort_by_burst_time"
-explain.task cmsc-125-cpu-scheduling
+explain.task docs/articles/shortest-job-first.md
 ```
 
 ## 19. 24-72 Hour Next Steps
