@@ -5,18 +5,17 @@
 #define QUANTUM 3
 #define EXEC_ORDER_SIZE 512
 
-void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], int tat[],
-                           char exec_order[], size_t exec_order_size);
+void simulate_rr(const int pid[], const int bt[], int wt[], int first_dispatch[],
+                 char exec_order[], size_t exec_order_size);
 void compute_response_times(const int first_dispatch[], int rt[]);
 void compute_turnaround_times(const int bt[], const int wt[], int tat[]);
 void compute_averages(const int wt[], const int rt[], const int tat[], double *avg_wt, double *avg_rt, double *avg_tat);
 void print_table(const int pid[], const int bt[], const int wt[], const int rt[], const int tat[],
                  const char exec_order[]);
 
-void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], int tat[],
-                           char exec_order[], size_t exec_order_size) {
+void simulate_rr(const int pid[], const int bt[], int wt[], int first_dispatch[],
+                 char exec_order[], size_t exec_order_size) {
     int remaining[PROCESS_COUNT];
-    int first_dispatch[PROCESS_COUNT];
     int exec_len = 0;
     int completed = 0;
     int t = 0;
@@ -29,8 +28,6 @@ void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], 
         remaining[i] = bt[i];
         first_dispatch[i] = -1;
         wt[i] = 0;
-        rt[i] = 0;
-        tat[i] = 0;
     }
 
     while (completed < PROCESS_COUNT) {
@@ -69,9 +66,6 @@ void compute_waiting_times(const int pid[], const int bt[], int wt[], int rt[], 
             }
         }
     }
-
-    compute_response_times(first_dispatch, rt);
-    compute_turnaround_times(bt, wt, tat);
 }
 
 void compute_response_times(const int first_dispatch[], int rt[]) {
@@ -116,6 +110,7 @@ int main(void) {
     int pid[PROCESS_COUNT] = {1, 2, 3, 4, 5};
     int bt[PROCESS_COUNT] = {8, 4, 9, 5, 2};
     int wt[PROCESS_COUNT];
+    int first_dispatch[PROCESS_COUNT];
     int rt[PROCESS_COUNT];
     int tat[PROCESS_COUNT];
     char exec_order[EXEC_ORDER_SIZE];
@@ -123,7 +118,9 @@ int main(void) {
     double avg_rt;
     double avg_tat;
 
-    compute_waiting_times(pid, bt, wt, rt, tat, exec_order, sizeof exec_order);
+    simulate_rr(pid, bt, wt, first_dispatch, exec_order, sizeof exec_order);
+    compute_response_times(first_dispatch, rt);
+    compute_turnaround_times(bt, wt, tat);
     compute_averages(wt, rt, tat, &avg_wt, &avg_rt, &avg_tat);
     print_table(pid, bt, wt, rt, tat, exec_order);
 
