@@ -20,6 +20,7 @@ static void sort_by_burst_time(Process processes[], int count) {
         Process key = processes[i];
         int j = i - 1;
 
+        /* Stable tie-break by PID for deterministic output. */
         while (j >= 0 &&
                (processes[j].bt > key.bt ||
                 (processes[j].bt == key.bt && processes[j].pid > key.pid))) {
@@ -76,7 +77,7 @@ static void print_table(const Process processes[], int count,
                         double avg_wt, double avg_rt, double avg_tat) {
     int i;
 
-    printf("Execution order: ");
+    printf("Execution Order: ");
     for (i = 0; i < count; i++) {
         printf("P%d", processes[i].pid);
         if (i < count - 1) {

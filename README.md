@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C (C99) for CMSC 125.</strong>
     <br />
-    Version: v1.0.1
+    Version: v1.0.7
     <br />
     Status: stable assignment-release baseline; FCFS, SJF, RR, and Priority C implementations plus report-source artifacts are complete and documented.
     <br />
-    <a href="docs/version-1.0.1-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-1.0.7-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -149,6 +149,11 @@ cmsc-125-cpu-scheduling/
     version-0.0.9-docs.md
     version-1.0.0-docs.md
     version-1.0.1-docs.md
+    version-1.0.2-docs.md
+    version-1.0.3-docs.md
+    version-1.0.4-docs.md
+    version-1.0.5-docs.md
+    version-1.0.6-docs.md
 
   learn/
     explain-cmsc-125-cpu-scheduling-california_fcfs.md
@@ -257,9 +262,9 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `1.0.1`
+* Version: `1.0.7`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), report-source artifacts, and beginner-focused explanation guides are complete and release-aligned, with unified `Process`-struct scheduling abstractions, cross-file output/sort-polish consistency, and refreshed labeled screenshots reflecting the 1.0.6 output changes.
 * Current gap: no assignment-blocking gap remains for the core submission package.
 
 Supporting documentation already present:
@@ -275,6 +280,12 @@ Supporting documentation already present:
 * `docs/version-0.0.9-docs.md` for Unit G Bolt B-G1 packaging completion and Gate E learner approval record
 * `docs/version-1.0.0-docs.md` for the stable assignment-release baseline and documentation reconciliation summary
 * `docs/version-1.0.1-docs.md` for the standalone explanation-guides release note and docs reconciliation summary
+* `docs/version-1.0.2-docs.md` for the Round Robin execution-order correctness fix and validation summary
+* `docs/version-1.0.3-docs.md` for the Round Robin simulation-responsibility refactor and validation summary
+* `docs/version-1.0.4-docs.md` for scheduler abstraction unification and process-count consistency validation
+* `docs/version-1.0.5-docs.md` for comparative write-up analysis-closure updates and report-source sync
+* `docs/version-1.0.6-docs.md` for scheduler output and deterministic-sort polish updates
+* `docs/version-1.0.7-docs.md` for screenshot artifact refresh following the 1.0.6 output-polish pass
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

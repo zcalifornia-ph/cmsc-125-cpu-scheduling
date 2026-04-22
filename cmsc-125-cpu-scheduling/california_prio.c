@@ -1,20 +1,24 @@
 /* Non-preemptive Priority scheduling: higher priority number = higher priority */
 #include <stdio.h>
 
-#define N 4
+#define PROCESS_COUNT 5
 
 typedef struct {
     int pid;
     int bt;
     int prio;
+    int wt;
+    int rt;
+    int tat;
 } Process;
 
-static void sort_by_priority(Process processes[], int n) {
+static void sort_by_priority(Process processes[], int count) {
     int i;
-    for (i = 1; i < n; ++i) {
+    for (i = 1; i < count; ++i) {
         Process key = processes[i];
         int j = i - 1;
 
+        /* Stable tie-break by PID for deterministic output. */
         while (j >= 0 &&
                (processes[j].prio < key.prio ||
                 (processes[j].prio == key.prio && processes[j].pid > key.pid))) {
@@ -25,66 +29,71 @@ static void sort_by_priority(Process processes[], int n) {
     }
 }
 
-static void compute_waiting_times(const Process processes[], int wt[], int n) {
+static void compute_waiting_times(Process processes[], int count) {
     int i;
-    wt[0] = 0;
-    for (i = 1; i < n; ++i) {
-        wt[i] = wt[i - 1] + processes[i - 1].bt;
+    processes[0].wt = 0;
+    for (i = 1; i < count; ++i) {
+        processes[i].wt = processes[i - 1].wt + processes[i - 1].bt;
     }
 }
 
-static void compute_response_times(const int wt[], int rt[], int n) {
+static void compute_response_times(Process processes[], int count) {
     int i;
-    for (i = 0; i < n; ++i) {
-        rt[i] = wt[i];
+    for (i = 0; i < count; ++i) {
+        processes[i].rt = processes[i].wt;
     }
 }
 
-static void compute_turnaround_times(const Process processes[], const int wt[], int tat[], int n) {
+static void compute_turnaround_times(Process processes[], int count) {
     int i;
-    for (i = 0; i < n; ++i) {
-        tat[i] = wt[i] + processes[i].bt;
+    for (i = 0; i < count; ++i) {
+        processes[i].tat = processes[i].wt + processes[i].bt;
     }
 }
 
-static void compute_averages(const int wt[], const int rt[], const int tat[], int n,
+static void compute_averages(const Process processes[], int count,
                              double *avg_wt, double *avg_rt, double *avg_tat) {
     int i;
     int total_wt = 0;
     int total_rt = 0;
     int total_tat = 0;
 
-    for (i = 0; i < n; ++i) {
-        total_wt += wt[i];
-        total_rt += rt[i];
-        total_tat += tat[i];
+    for (i = 0; i < count; ++i) {
+        total_wt += processes[i].wt;
+        total_rt += processes[i].rt;
+        total_tat += processes[i].tat;
     }
 
-    *avg_wt = (double)total_wt / n;
-    *avg_rt = (double)total_rt / n;
-    *avg_tat = (double)total_tat / n;
+    *avg_wt = (double)total_wt / count;
+    *avg_rt = (double)total_rt / count;
+    *avg_tat = (double)total_tat / count;
 }
 
-static void print_execution_order(const Process processes[], int n) {
+static void print_execution_order(const Process processes[], int count) {
     int i;
     printf("Execution Order: ");
-    for (i = 0; i < n; ++i) {
+    for (i = 0; i < count; ++i) {
         printf("P%d", processes[i].pid);
-        if (i < n - 1) {
+        if (i < count - 1) {
             printf(", ");
         }
     }
     printf("\n");
 }
 
-static void print_table(const Process processes[], const int wt[], const int rt[], const int tat[], int n,
+static void print_table(const Process processes[], int count,
                         double avg_wt, double avg_rt, double avg_tat) {
     int i;
 
     printf("PID   BT   PRIO   WT   RT   TAT\n");
-    for (i = 0; i < n; ++i) {
+    for (i = 0; i < count; ++i) {
         printf("P%-4d%-5d%-7d%-5d%-5d%d\n",
-               processes[i].pid, processes[i].bt, processes[i].prio, wt[i], rt[i], tat[i]);
+               processes[i].pid,
+               processes[i].bt,
+               processes[i].prio,
+               processes[i].wt,
+               processes[i].rt,
+               processes[i].tat);
     }
 
     printf("Average WT: %.2f\n", avg_wt);
@@ -93,27 +102,25 @@ static void print_table(const Process processes[], const int wt[], const int rt[
 }
 
 int main(void) {
-    Process processes[N] = {
-        {1, 10, 3},
-        {2, 6, 1},
-        {3, 4, 4},
-        {4, 8, 2}
+    Process processes[PROCESS_COUNT] = {
+        {1, 8, 3, 0, 0, 0},
+        {2, 4, 1, 0, 0, 0},
+        {3, 9, 4, 0, 0, 0},
+        {4, 5, 2, 0, 0, 0},
+        {5, 2, 5, 0, 0, 0}
     };
-    int wt[N];
-    int rt[N];
-    int tat[N];
     double avg_wt;
     double avg_rt;
     double avg_tat;
 
-    sort_by_priority(processes, N);
-    compute_waiting_times(processes, wt, N);
-    compute_response_times(wt, rt, N);
-    compute_turnaround_times(processes, wt, tat, N);
-    compute_averages(wt, rt, tat, N, &avg_wt, &avg_rt, &avg_tat);
+    sort_by_priority(processes, PROCESS_COUNT);
+    compute_waiting_times(processes, PROCESS_COUNT);
+    compute_response_times(processes, PROCESS_COUNT);
+    compute_turnaround_times(processes, PROCESS_COUNT);
+    compute_averages(processes, PROCESS_COUNT, &avg_wt, &avg_rt, &avg_tat);
 
-    print_execution_order(processes, N);
-    print_table(processes, wt, rt, tat, N, avg_wt, avg_rt, avg_tat);
+    print_execution_order(processes, PROCESS_COUNT);
+    print_table(processes, PROCESS_COUNT, avg_wt, avg_rt, avg_tat);
 
     return 0;
 }
