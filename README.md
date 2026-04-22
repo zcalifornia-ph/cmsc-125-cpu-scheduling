@@ -19,11 +19,11 @@
   <p align="center">
     <strong>A comparative implementation of four CPU scheduling algorithms in C/C++ for CMSC 125.</strong>
     <br />
-    Version: v0.0.7
+    Version: v0.0.8
     <br />
-    Status: FCFS, SJF, RR, and Priority C implementations are completed; Unit F Bolts B-F1 and B-F2 are learner-approved; PDF assembly and zip packaging remain pending.
+    Status: FCFS, SJF, RR, and Priority C implementations are completed; Unit F is Gate-D-approved with a learner-owned LaTeX PDF path; Unit G zip packaging remains pending.
     <br />
-    <a href="docs/version-0.0.7-docs.md"><strong>Read the latest version notes »</strong></a>
+    <a href="docs/version-0.0.8-docs.md"><strong>Read the latest version notes »</strong></a>
     <br />
     <br />
     <a href="LICENSE.txt">View License</a>
@@ -147,6 +147,7 @@ cmsc-125-cpu-scheduling/
     version-0.0.5-docs.md
     version-0.0.6-docs.md
     version-0.0.7-docs.md
+    version-0.0.8-docs.md
 
   repo/
     images/
@@ -165,6 +166,11 @@ cmsc-125-cpu-scheduling/
         03_rr.png
         04_prio.png
       writeup.md
+    writeup/
+      california_rfm.tex
+      references.bib
+      up-header.png
+      california_rfm.pdf
     ai-dlc-docs/
       requirements/
         INCEPTION.md
@@ -183,7 +189,8 @@ Current tracked emphasis:
 * AI-DLC construction artifacts for Units `U-A` through `U-F` are now persisted under `cmsc-125-cpu-scheduling/ai-dlc-docs/`
 * Unit F Bolt `B-F1` screenshot artifacts now exist under `cmsc-125-cpu-scheduling/artifacts/screenshots/`
 * Unit F Bolt `B-F2` comparative write-up now exists at `cmsc-125-cpu-scheduling/artifacts/writeup.md`
-* Unit F Bolt `B-F3` PDF assembly and Unit G packaging (`california_rfm.pdf`, `california.zip`) are still pending
+* Unit F Bolt `B-F3` is complete with a learner-owned LaTeX source path under `cmsc-125-cpu-scheduling/writeup/`
+* Unit G packaging (`california.zip`) is the remaining pending submission step
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -259,10 +266,10 @@ The assignment brief points to the following study materials:
 
 ## Current Status
 
-* Version: `0.0.7`
+* Version: `0.0.8`
 * Repository description: A comparative implementation of four scheduling algorithms in C for CMSC 125.
-* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), Unit F Bolt `B-F1` screenshots, and Unit F Bolt `B-F2` comparative write-up are in place.
-* Current gap: Unit F Bolt `B-F3` PDF assembly and Unit G packaging (`california.zip`) are still pending.
+* Current state: governance docs, license baseline, third-party notices, local reference articles, four C algorithm implementations (FCFS/SJF/RR/Priority), and all Unit F Bolts (`B-F1/B-F2/B-F3`) with Gate D approval are in place.
+* Current gap: Unit G packaging (`california.zip`) is still pending.
 
 Supporting documentation already present:
 
@@ -273,6 +280,7 @@ Supporting documentation already present:
 * `docs/version-0.0.5-docs.md` for the Unit B/C/D/E build completion and AI-DLC artifact/validation record
 * `docs/version-0.0.6-docs.md` for the Unit F Bolt B-F1 screenshot completion and learner-approval record
 * `docs/version-0.0.7-docs.md` for the Unit F Bolt B-F2 write-up completion and learner-approval record
+* `docs/version-0.0.8-docs.md` for the Unit F Bolt B-F3 LaTeX-output approval and Gate D completion record
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
